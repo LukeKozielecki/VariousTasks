@@ -5,7 +5,10 @@ import kotlinx.serialization.Serializable
 sealed class NavRoutesSerializable {
 
     @Serializable
-    object DummyTask1
+    object HubScreen
+
+    @Serializable
+    object ApproximationsOfPi
 
     @Serializable
     object DummyTask2
