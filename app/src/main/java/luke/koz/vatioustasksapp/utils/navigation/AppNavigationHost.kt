@@ -13,6 +13,7 @@ import luke.koz.vatioustasksapp.R
 import luke.koz.vatioustasksapp.approximations_of_pi.presentation.ApproximationsOfPiScreen
 import luke.koz.vatioustasksapp.hubscreen.presentation.HubDestinationElement
 import luke.koz.vatioustasksapp.hubscreen.presentation.HubScreen
+import luke.koz.vatioustasksapp.next_prime_number.presentation.PrimeNumberScreen
 import luke.koz.vatioustasksapp.ui.theme.VatiousTasksAppTheme
 
 @Composable
@@ -25,6 +26,11 @@ fun AppNavigationHost(
             destinationRoute = {navHostController.navigate(NavRoutesSerializable.ApproximationsOfPi)},
             destinationLabel = "Approximate π to specified digit",
             destinationImage = R.drawable.symbol_of_pi_icon
+        ),
+        HubDestinationElement(
+            destinationRoute = {navHostController.navigate(NavRoutesSerializable.CalculateNextPrimeNumber)},
+            destinationLabel = "Calculate Next PrimeNumber",
+            destinationImage = R.drawable.icon_prime_number
         ),
     )
 
@@ -40,9 +46,9 @@ fun AppNavigationHost(
                 }
             }
 
-            composable<NavRoutesSerializable.DummyTask2> {
+            composable<NavRoutesSerializable.CalculateNextPrimeNumber> {
                 Column {
-                    Text(text = "Screen 2")
+                   PrimeNumberScreen()
                 }
             }
 

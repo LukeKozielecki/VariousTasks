@@ -11,7 +11,7 @@ sealed class NavRoutesSerializable {
     object ApproximationsOfPi
 
     @Serializable
-    object DummyTask2
+    object CalculateNextPrimeNumber
 
     @Serializable
     object DummyTask3
